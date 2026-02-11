@@ -1,0 +1,163 @@
+body {
+    background-color: #fdfaf6; /* لون كريمي لؤلؤي فخم */
+    color: #4a4a4a; /* رمادي دافئ مريح للعين */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.full-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #ffffff 0%, #f7f0e6 100%);
+}
+
+.logo-name {
+    border: 2px solid #D4AF37;
+    padding: 15px 40px;
+    font-size: 3rem;
+    color: #b8860b;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+    background-color: #fff;
+    display: inline-block;
+}
+
+.gold-input {
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e0d5c1;
+    padding: 15px;
+    color: #b8860b;
+    text-align: center;
+    width: 250px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.gold-btn, .classic-btn-large {
+    background: #b8860b;
+    border: none;
+    color: #ffffff;
+    padding: 15px 35px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.2);
+}
+
+.classic-btn-large { width: 90%; max-width: 500px; display: block; margin: 30px auto; }
+
+/* Matrix Style (تم تعديلها لتناسب الفاتح) */
+.matrix-box {
+    width: 90%;
+    height: 200px;
+    border: 1px solid #e0d5c1;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+#canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; }
+
+.search-overlay {
+    position: absolute; width: 100%; text-align: center; top: 40%;
+    color: #b8860b; font-weight: bold;
+}
+
+.algo-msg-box { text-align: center; color: #b8860b; margin: 10px 0; font-weight: 500; }
+
+/* Chat Bubbles Luxury Style */
+.chat-container {
+    display: flex; flex-direction: column; gap: 18px;
+    padding: 20px; max-width: 600px; margin: 0 auto;
+}
+
+.bubble {
+    max-width: 85%; padding: 18px; border-radius: 20px;
+    line-height: 1.6; animation: popIn 0.6s ease forwards;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+}
+
+.right { 
+    align-self: flex-end; 
+    background: #fff; 
+    color: #4a4a4a; 
+    border: 1px solid #f0e6d6;
+    border-bottom-right-radius: 4px;
+    border-right: 4px solid #D4AF37;
+}
+
+.left { 
+    align-self: flex-start; 
+    background: #fdfcfb; 
+    color: #4a4a4a; 
+    border: 1px solid #eee;
+    border-bottom-left-radius: 4px;
+    border-left: 4px solid #b8860b;
+}
+
+.divider-msg { text-align: center; color: #b8860b; margin: 20px 0; font-weight: bold; opacity: 0.7; }
+
+/* Timer Modern Card */
+.timer-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    padding: 20px; max-width: 500px; margin: 0 auto;
+}
+
+.timer-box { 
+    background: #fff; 
+    border: 1px solid #f0e6d6; 
+    padding: 15px 5px; 
+    border-radius: 12px; 
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.02);
+}
+.timer-box span { font-size: 1.6rem; color: #b8860b; font-weight: bold; display: block; }
+
+/* Images & Cards */
+.image-frame img, .map-card img { 
+    border: 5px solid #fff; 
+    width: 90%; display: block; margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.wp-msg, .gold-desc { 
+    background: #fff; 
+    padding: 20px; margin: 10px auto; width: 85%; 
+    text-align: center; border-radius: 12px; 
+    color: #555;
+    border: 1px solid #f0e6d6;
+}
+
+.full-gold-line { border: 0; height: 1px; background: linear-gradient(to right, transparent, #e0d5c1, transparent); margin: 50px 0; }
+
+/* Final Letter - Clean Luxury */
+.final-letter { 
+    background: #ffffff; 
+    color: #333; 
+    border: 1px solid #e0d5c1; 
+    padding: 40px 25px; 
+    margin: 40px 15px; 
+    border-radius: 15px; 
+    text-align: center; 
+    line-height: 2.2; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+}
+.final-sign { color: #b8860b; font-weight: bold; margin-top: 25px; font-size: 1.3rem; }
+
+@keyframes popIn { from { opacity: 0; transform: translateY(10px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.hidden { display: none; }

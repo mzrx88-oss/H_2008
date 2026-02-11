@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HODOA | MY QUEEN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-page" class="full-page">
+        <div class="login-container">
+            <h1 class="logo-name">HODOA</h1>
+            <div class="input-wrapper">
+                <input type="password" id="passwordField" placeholder="كلمة السر ..." class="gold-input">
+            </div>
+            <button onclick="checkPassword()" class="gold-btn">دخول للمملكة</button>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        
+        <section class="algorithm-section">
+            <div class="algo-container">
+                <div class="matrix-box">
+                    <canvas id="canvas"></canvas>
+                    <div class="search-overlay">جاري تشغيل خوارزمية البحث عن شريكة العمر...</div>
+                </div>
+                <div id="algo-status" class="algo-msg-box"></div>
+            </div>
+
+            <div id="chat-flow" class="chat-container"></div>
+        </section>
+
+        <hr class="full-gold-line">
+
+        <div id="explore-trigger" class="hidden">
+            <button id="explore-btn" class="classic-btn-large">ادخلي هنا بقا نستكشف شويه</button>
+        </div>
+
+        <section id="eyes-section" class="hidden">
+            <div class="image-frame">
+                <img src="images/h.jpg" alt="عيونك">
+                <div class="wp-msg">عيونك الي سحروني في جمالهم وحلاوتهم</div>
+            </div>
+
+            <div class="timer-section">
+                <h2 class="timer-title">هنا بدأت حكايتنا وهنا بدا حبنا بدأت قصتنا تبتدي من التاريخ ده 15/6/2025</h2>
+                <div id="love-timer" class="timer-grid"></div>
+            </div>
+
+            <button id="dreams-btn" class="classic-btn-large">حكايتنا وانتي مراتي</button>
+        </section>
+
+        <section id="dreams-section" class="hidden">
+            <div class="map-card">
+                <img src="images/home.jpg">
+                <div class="gold-desc">المسافة اللي بيني وبينك حاليا ..هاتتغير في المستقبل وهنكون في بيت واحد وانتي في حضني وفي بيتنا مع بعض</div>
+            </div>
+            <hr class="full-gold-line">
+
+            <div class="map-card">
+                <img src="images/t.jpg">
+                <div class="gold-desc">ان شاء الله نروحها ما اخطبك ونعمل هناك زكريات جميله وحلوه زيك كدا ...</div>
+            </div>
+            <hr class="full-gold-line">
+
+            <div class="map-card">
+                <img src="images/m.jpg">
+                <div class="gold-desc">ان شاء الله دي اول مدينه هانروحها بعد الجواز وبدايا شهر العسل بتاعتا ياقمر 💞</div>
+            </div>
+            <hr class="full-gold-line">
+
+            <div class="map-card">
+                <img src="images/tar.jpg">
+                <div class="gold-desc">انتي قلتي قبل كده انك نفسك تروحي تركيه ودا وعد مني ان شاء الله ووعد الحر دين ..وها احققهولك بإذن الله ♥️ 🫂</div>
+            </div>
+            <hr class="full-gold-line">
+
+            <div class="map-card">
+                <img src="images/fr.jpg">
+                <div class="gold-desc">دي مدينة أحلامي الي عايز ازورها بس عايز احقق الحلم دا وانتي معايا يانور عيني ♥️🫂🥹</div>
+            </div>
+            <hr class="full-gold-line">
+
+            <div class="map-card">
+                <img src="images/mm.jpg">
+                <div class="gold-desc">هنا بقا نقضي اسبوع كلو حب ورومانسيه ونكتشف بعض وتكتشف ثقافه جديده ونعيش اجمل شهر عسل في بدايه حياتنا ياحببتي ونور عيني ♥️🫂</div>
+            </div>
+
+            <hr class="full-gold-line">
+
+            <div class="final-letter">
+                <div class="text-content">
+                    عايز اقولك انك بحبك ياهدوء بحبك وبعشقك ومهما اكتب في كلام مش اقدر اوصف الي جوايا ليكي وحبي ليكي عامل ازاي وقد اي ياعمري انا عشقتك وعايز اكمل بقيت ايامي معاكي ..
+                    كل سنه ياحببتي وانتي عيدي وجمبي اول عيد حب لينا مع بعض اه بس مش مراتي اخري اعبر بكلام بس هعمل اي المهم ان احنا لينا يومنا ونبقي مع بعض واقولك كل الكلام دا في وشك وانا ببص لعيونك الحلوين ياعمري انتي 🥹🥹♥️🫂🥰👰......
+                    وجودك في حياتي زي النور اللي بينور كل لحظة، مهما كانت ظلمة وجودك في حياتي نعمه من عند ربنا 🖤👥🫂
+                    امت بقا بقا نحقق حلمنا ونعيش مع بعض ساعتها والله لاخليكي ملكه...😍🫂🖤♥️
+                    كل الكلام دا حقيقي مش يعني مش بقولك كدا علشان دا عيد حب والكلام دا انتي كل ثانيه عندك وبينا بتعدي عليا عيد وفرحة..
+                    انا واثق من نفسي انا هانفذ كل الكلام دا وواثق فيكي انك مستنياني وانا عمري ما اخلف وعدي معاكي..🥰
+                </div>
+                <div class="final-sign">I love you so much and I adore you Hodoa💞✨🥹🥹🫂</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
