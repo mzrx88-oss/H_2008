@@ -11,7 +11,6 @@ async function checkPassword() {
         await wait(500);
         runChatAlgorithm();
         
-        // تشغيل العداد
         updateLoveTimer();
         setInterval(updateLoveTimer, 1000);
     } else {
@@ -23,7 +22,6 @@ async function runChatAlgorithm() {
     const chatFlow = document.getElementById('chat-flow');
     const status = document.getElementById('algo-status');
     chatFlow.innerHTML = '';
-
     const messages = [
         { t: "جاري البحث عليكي وسط 4.09 مليار امرأة لكي تدخلي الي قلبي وتعمريه من وتكوني انتي سيده قلبي وملكه العالم 🥹♥️", side: "right" },
         { t: "⬇️", side: "center" },
@@ -34,17 +32,14 @@ async function runChatAlgorithm() {
         { t: "هدوء | Hodoa <br> 1 أكتوبر 2008 <br> اخيرا بقى ظهرتي وجيتي للعالم أخير علشان اقابلك كنت واثق اني هلاقيكي يابت🥹♥️🫂", side: "left" },
         { t: "هنا انتي دخلتي قلبي وعقلي وخطفتيني بعيونك الحلوين يلا بقا تعالي يانور عيني نستكشف اكتر الي بعد كدا♥️", side: "right" }
     ];
-
     for (let msg of messages) {
         let div = document.createElement('div');
         div.className = msg.side === "center" ? "divider-msg" : `bubble ${msg.side}`;
         div.innerHTML = msg.t;
         chatFlow.appendChild(div);
-        
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         await wait(3000);
     }
-
     status.innerHTML = "تم ايجاد حبيبه القلب مبروك";
     document.getElementById('explore-trigger').classList.remove('hidden');
 }
@@ -52,17 +47,13 @@ async function runChatAlgorithm() {
 document.getElementById('explore-btn').onclick = function() {
     const section = document.getElementById('eyes-section');
     section.classList.remove('hidden');
-    setTimeout(() => {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    setTimeout(() => { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
 };
 
 document.getElementById('dreams-btn').onclick = function() {
     const section = document.getElementById('dreams-section');
     section.classList.remove('hidden');
-    setTimeout(() => {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    setTimeout(() => { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
 };
 
 function initMatrix() {
@@ -73,7 +64,7 @@ function initMatrix() {
     const letters = "01HODOALOVE10";
     const drops = Array(Math.floor(canvas.width / 10)).fill(1);
     function draw() {
-        ctx.fillStyle = "rgba(255, 255, 255, 0.1)"; // خلفية فاتحة للماتريكس
+        ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
         ctx.fillRect(0,0,canvas.width,canvas.height);
         ctx.fillStyle = "#D4AF37"; ctx.font = "10px arial";
         drops.forEach((y, i) => {
@@ -92,7 +83,6 @@ function updateLoveTimer() {
     const days = Math.floor(diff / 86400000);
     const years = Math.floor(days / 365);
     const remainingDays = days % 365;
-    
     document.getElementById('love-timer').innerHTML = `
         <div class="timer-box"><span>${years}</span>سنين</div>
         <div class="timer-box"><span>${remainingDays}</span>أيام</div>
