@@ -3,20 +3,33 @@ const wait = (ms) => new Promise(r => setTimeout(r, ms));
 async function checkPassword() {
     const input = document.getElementById('passwordField').value;
     if (input === "1102008") {
-        document.getElementById('login-page').style.display = 'none';
-        const main = document.getElementById('main-content');
-        main.classList.remove('hidden');
-        
-        initMatrix();
-        await wait(500);
-        runChatAlgorithm();
-        
-        updateLoveTimer();
-        setInterval(updateLoveTimer, 1000);
+        loginSuccess(); // جمعت خطوات النجاح هنا لسهولة الاستدعاء
     } else {
         alert("كلمة المرور غلط يا قمر❣️!");
     }
 }
+
+// دالة النجاح اللي بتفتح الموقع
+async function loginSuccess() {
+    document.getElementById('login-page').style.display = 'none';
+    const main = document.getElementById('main-content');
+    main.classList.remove('hidden');
+    
+    initMatrix();
+    await wait(500);
+    runChatAlgorithm();
+    
+    updateLoveTimer();
+    setInterval(updateLoveTimer, 1000);
+}
+
+// --- السطر اللي هيخلي الموقع يفتح لوحده لما يجيله أمر من الموقع الجديد ---
+window.addEventListener('load', () => {
+    if (window.location.hash === "#bypass") {
+        loginSuccess(); 
+    }
+});
+// ------------------------------------------------------------------
 
 async function runChatAlgorithm() {
     const chatFlow = document.getElementById('chat-flow');
@@ -83,11 +96,14 @@ function updateLoveTimer() {
     const days = Math.floor(diff / 86400000);
     const years = Math.floor(days / 365);
     const remainingDays = days % 365;
-    document.getElementById('love-timer').innerHTML = `
-        <div class="timer-box"><span>${years}</span>سنين</div>
-        <div class="timer-box"><span>${remainingDays}</span>أيام</div>
-        <div class="timer-box"><span>${Math.floor((diff/3600000)%24)}</span>ساعات</div>
-        <div class="timer-box"><span>${Math.floor((diff/60000)%60)}</span>دقائق</div>
-        <div class="timer-box"><span>${Math.floor((diff/1000)%60)}</span>ثواني</div>
-    `;
+    const timerEl = document.getElementById('love-timer');
+    if(timerEl) {
+        timerEl.innerHTML = `
+            <div class="timer-box"><span>${years}</span>سنين</div>
+            <div class="timer-box"><span>${remainingDays}</span>أيام</div>
+            <div class="timer-box"><span>${Math.floor((diff/3600000)%24)}</span>ساعات</div>
+            <div class="timer-box"><span>${Math.floor((diff/60000)%60)}</span>دقائق</div>
+            <div class="timer-box"><span>${Math.floor((diff/1000)%60)}</span>ثواني</div>
+        `;
+    }
 }
